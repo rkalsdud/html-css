@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        p{
+            float:right;
+        }
+        div{
+            clear:both;
+        }
+        .left-align{
+            float:left;
+        }
+        .request{
+            width:100px;
+            height:30px;
+            margin:auto;
+            margin-top:50px;
+        }
+        .container{
+            width:410px;
+            margin:auto;
+        }
+        .list1{
+            display:flex;
+        }
+        .list1 ul li input{
+            margin-left:45px;
+        }
+        .list2{
+            display:flex;
+            flex-wrap:wrap;
+            width:200px;
+        }
+        .list2 li button{
+            position:relative;
+            bottom:25px;
+            left:10px;
+            width:100px;
+            text-align:left;
+        }
+        .list3{
+            display:flex;
+        }
+        .list3 ul li{
+            margin-left:10px;
+        }
+        select{
+            width:350px;
+        }
+    </style>
+</head>
+<body>
+    <form>
+
+        <div class="container">
+            <p>실명 인증된 아이디로 가입
+                <input type="checkbox">
+            </p>
+        <div style="margin:auto; width:450px">
+            <div>
+
+                <div>
+                    <img src="../아이디.png" alt="아이콘" width="30px">
+                    <input type="text" placeholder="아이디" size="50" required>
+                </div>
+
+                <div>
+                    <img src="../비밀번호.png" alt="아이콘" width="30px">
+                    <input type="password" placeholder="비밀번호" size="50" required>
+                </div>
+
+                <div>
+                    <img src="../이메일.png" alt="아이콘" width="30px">
+                    <input type="text" placeholder="[선택] 이메일주소 (비밀번호 찾기등 본인 확인용)" size="50">
+                </div>
+
+            </div>
+            <br>
+            <div>
+
+                <div>
+                    <img src="../아이디.png" alt="아이콘" width="30px">
+                    <input type="text" placeholder="이름" size="50px" required>
+                </div>
+
+                <div>
+                    <img src="../캘린더.png" alt="아이콘" width="30px">
+                    <input type="text" placeholder="생년월일 8자리" size="50px" required> 
+                </div>
+                <div class="list1">
+                    <ul type="none" class="list1">
+                        <li><input type="radio" name="gender" value="male">남자</li>
+                        <li><input type="radio" name="gender" value="female">여자</li>
+                        <li><input type="radio" name="gender" value="none">선택안함</li>
+                    </ul>
+                </div>
+                <div>
+                    <img src="../국가.png" alt="아이콘" width="30px">
+                    <select name="국가" required> 
+                        <option value="korea">대한민국 +82</option>
+                    </select>
+                </div>
+                <div>
+                    <img src="../통신사.png" alt="아이콘" width="30px">
+                    <input type="text" placeholder="통신사 선택" size="50px" required>
+                    <ul type="none" class="list2">
+                        <li><button type="button" >
+                            SKT</li>
+                        <li><button type="button">
+                            SKT 알뜰폰
+                        </li>
+                        <li><button type="button">
+                            KT</li>
+                        <li><button type="button" >
+                            KT 알뜰폰
+                        </li>
+                        <li><button type="button">
+                            LG U+</li>
+                        <li><button type="button">
+                            LG U+ 알뜰폰
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="list3">
+                    <ul type="none" class="list3">
+                        <li><input type="radio" name="gender2" value="male">
+                            남자</li>
+                        <li><input type="radio" name="gender2" value="female">
+                            여자</li>
+                    </ul>
+
+                    <ul type="none" class="list3">
+                        <li><input type="radio" name="nation" value="native">
+                            내국인</li>
+                        <li ><input type="radio" name="nation" value="forieghnor">
+                            외국인</li>
+                    </ul>
+
+                </div>
+                <div>
+                    <img src="../휴대전화.png" alt="아이콘" width="30px">
+                    <input type="text" placeholder="휴대전화번호" size="50px">
+                </div>
+
+            </div>
+            <div>
+                <input type="checkbox" required> [필수] 인증 약관 전체동의
+            </div>
+        </div>
+        <div class="request"><input type="submit" value="인증요청" class="request"></div>
+        </div>
+    </form>
+</body>
+</html>
