@@ -14,18 +14,10 @@
 
     </h1>
     <div class="contents">
-        {%for todo in todos %}
-        <div class='card'> 
-            <h2>{{todo.id}}</h2> 
-            <h3>{{todo.todo}}</h3> 
-            <h3> User ID:{{todo.userId}}</h3>
-            {% if todo.completed %}
-            <input checked type="checkbox" name="status" id="status">
-            {% else %}
-            <input type="checkbox" name="status" id="status">
-            {% endif %}
-        </div>
-        {% endfor %}
+        <!-- 
+        이부분만 수정!
+        template을 활용한 for문과 if문 사용하여 todo 목록을 생성 
+        -->
     </div>
 </div>
 {% endblock%}
