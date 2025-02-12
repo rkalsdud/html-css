@@ -1,0 +1,31 @@
+.contents{
+    display: flex;
+    max-width: 1200px; 
+    justify-content: flex-start;
+    margin: 40px auto;
+    flex-flow: wrap;
+}
+
+.card {
+    margin: 0 40px auto;
+    padding: 20px 40px 40px;
+    width: calc(100% / 1); 
+    text-align: left;
+    background: #fff;
+    border-bottom: 4px solid #ccc;
+    border-radius: 6px;
+    transition: all .5s;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.logButton{
+    position: absolute;
+    right: 0;
+    margin: 20px;
+}

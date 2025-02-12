@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Todos{% endblock %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static', filename='todo.css') }}">
+{% endblock %}
+
+{% block content %}
+<div class="wrap">
+    <h1 class='title'>
+        {% if current_user.is_authenticated %}{{ current_user.username }}{% else %}Stranger{% endif %}'s Todos
+
+    </h1>
+    <div class="contents">
+        {%for todo in todos %}
+        <div class='card'> 
+            <h2>{{todo.id}}</h2> 
+            <h3>{{todo.todo}}</h3> 
+            <h3> User ID:{{todo.userId}}</h3>
+            {% if todo.completed %}
+            <input checked type="checkbox" name="status" id="status">
+            {% else %}
+            <input type="checkbox" name="status" id="status">
+            {% endif %}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+{% endblock%}
