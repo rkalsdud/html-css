@@ -1,9 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script>
+        $(document).ready(()=>{
+            $('.list2').hide();
+
+        })
+    </script>
     <style>
         p{
             float:right;
@@ -38,7 +45,7 @@
         .list2 li button{
             position:relative;
             bottom:25px;
-            left:10px;
+            left:25px;
             width:100px;
             text-align:left;
         }
@@ -50,6 +57,10 @@
         }
         select{
             width:350px;
+        }
+        .center{
+            display:flex;
+            align-items: center;
         }
     </style>
 </head>
@@ -63,17 +74,17 @@
         <div style="margin:auto; width:450px">
             <div>
 
-                <div>
+                <div class="center">
                     <img src="../아이디.png" alt="아이콘" width="30px">
                     <input type="text" placeholder="아이디" size="50" required>
                 </div>
 
-                <div>
+                <div class="center">
                     <img src="../비밀번호.png" alt="아이콘" width="30px">
                     <input type="password" placeholder="비밀번호" size="50" required>
                 </div>
 
-                <div>
+                <div class="center">
                     <img src="../이메일.png" alt="아이콘" width="30px">
                     <input type="text" placeholder="[선택] 이메일주소 (비밀번호 찾기등 본인 확인용)" size="50">
                 </div>
@@ -82,12 +93,12 @@
             <br>
             <div>
 
-                <div>
+                <div class="center">
                     <img src="../아이디.png" alt="아이콘" width="30px">
                     <input type="text" placeholder="이름" size="50px" required>
                 </div>
 
-                <div>
+                <div class="center">
                     <img src="../캘린더.png" alt="아이콘" width="30px">
                     <input type="text" placeholder="생년월일 8자리" size="50px" required> 
                 </div>
@@ -98,18 +109,20 @@
                         <li><input type="radio" name="gender" value="none">선택안함</li>
                     </ul>
                 </div>
-                <div>
+                <div class="center">
                     <img src="../국가.png" alt="아이콘" width="30px">
                     <select name="국가" required> 
                         <option value="korea">대한민국 +82</option>
                     </select>
                 </div>
                 <div>
+                    <div class="center">
                     <img src="../통신사.png" alt="아이콘" width="30px">
-                    <input type="text" placeholder="통신사 선택" size="50px" required>
+                    <input type="text" placeholder="통신사 선택" size="50px" required onfocus="$('.list2').show()" onblur="$('.list2').hide()">
+                    </div>
                     <ul type="none" class="list2">
                         <li><button type="button" >
-                            SKT</li>
+                            SKT</li> 
                         <li><button type="button">
                             SKT 알뜰폰
                         </li>
@@ -142,8 +155,8 @@
                     </ul>
 
                 </div>
-                <div>
-                    <img src="../휴대전화.png" alt="아이콘" width="30px">
+                <div class="center">
+                    <img src="../휴대전화.png" alt="아이콘" width="25px">
                     <input type="text" placeholder="휴대전화번호" size="50px">
                 </div>
 
