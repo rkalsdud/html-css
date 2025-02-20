@@ -14,10 +14,11 @@
 
     </h1>
     <div class="contents">
-        <!-- 
-        이부분만 수정!
-        template을 활용한 for문과 if문 사용하여 todo 목록을 생성 
-        -->
+        <ul>
+            {% for todo in data %}
+            <li>{{todo['todo']}}</li>
+            {% endfor %}
+        </ul>
     </div>
 </div>
 {% endblock%}

@@ -9,6 +9,10 @@ def index():
     return render_template('index.html')
 
 @main.route('/todos')
+@login_required
+def todos():
+    data=requests.get('https://dummyjson.com/todos').json().get('todos',[])
+    return render_template('todo.html', data=data)
 
 # 이부분 수정
 # 라우팅 함수 작성
